@@ -13,9 +13,8 @@ fn print_files(dir: &str, depth: usize) {
                         let path = entry.path();
                         let md = fs::metadata(&path).unwrap();
 
-                        // Get the file or directory name
                         let name = entry.file_name();
-                        let name = name.to_string_lossy(); // Convert OsString to String
+                        let name = name.to_string_lossy(); 
 
                         // Indent based on depth
                         let indent = " ".repeat(depth * 4);
